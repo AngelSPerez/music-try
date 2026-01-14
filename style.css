@@ -2,7 +2,6 @@ body {
     font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
     margin: 0;
     background-color: #f4f4f4;
-
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -11,7 +10,6 @@ body {
 main {
     flex: 1;
 }
-
 
 header {
     background-color: #233D4D;
@@ -22,6 +20,11 @@ header {
     top: 0;
     left: 0;
     z-index: 10;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 10px 0;
 }
 
 .about {
@@ -170,4 +173,197 @@ footer a:hover {
     height: 1px;
     opacity: 0;
     pointer-events: none;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .about {
+        width: 85%;
+    }
+    
+    iframe {
+        width: 85%;
+    }
+    
+    .ytm-player {
+        width: 85%;
+    }
+}
+
+/* Mobile grande y pequeño */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 22px;
+        padding: 0 10px;
+    }
+    
+    .about {
+        width: 85%;
+        margin-top: 100px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .about h2 {
+        font-size: 22px;
+        margin-top: 0;
+    }
+    
+    .about p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    iframe {
+        width: 90%;
+        margin-top: 25px;
+        height: 380px;
+    }
+    
+    .ytm-wrapper {
+        margin-top: 25px;
+    }
+    
+    .ytm-player {
+        width: 90%;
+        height: auto;
+        min-height: 140px;
+        padding: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .ao {
+        margin: 0;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .ytm-left {
+        flex-direction: row;
+        gap: 12px;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .ytm-cover {
+        width: 90px;
+        height: 90px;
+        flex-shrink: 0;
+    }
+    
+    .ytm-text {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .ytm-title {
+        font-size: 17px;
+        line-height: 1.3;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .ytm-artist {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+    
+    .ytm-play {
+        width: 54px;
+        height: 54px;
+        font-size: 18px;
+        margin: 0;
+        flex-shrink: 0;
+    }
+    
+    .ytm-logo {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        opacity: 0.85;
+        pointer-events: auto;
+    }
+    
+    .ytm-logo img {
+        width: 100px;
+        height: auto;
+    }
+    
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px 20px;
+        margin-top: 30px;
+    }
+    
+    footer h3 {
+        margin: 0 0 8px 0;
+    }
+    
+    footer p {
+        margin: 0;
+    }
+}
+
+/* Mobile muy pequeño */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+    
+    .about {
+        width: 88%;
+        padding: 18px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .about h2 {
+        font-size: 20px;
+    }
+    
+    .about p {
+        font-size: 14px;
+    }
+    
+    iframe {
+        width: 92%;
+        height: 352px;
+    }
+    
+    .ytm-player {
+        width: 92%;
+        padding: 18px 12px;
+    }
+    
+    .ytm-cover {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .ytm-title {
+        font-size: 16px;
+    }
+    
+    .ytm-artist {
+        font-size: 13px;
+    }
+    
+    .ytm-play {
+        width: 54px;
+        height: 54px;
+        font-size: 18px;
+    }
+    
+    .ytm-logo img {
+        width: 110px;
+    }
 }
